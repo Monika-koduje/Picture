@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.images {
+  position: relative;
+  height: 57vh;
+  width: 106vh;
+  margin: 100px auto;
+  overflow: hidden;
+  background-color: #000;
+  border: 3px solid #333;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.5);
+}
+
+img {
+  position: absolute;
+  display: block;
+}
+
+img:nth-of-type(1) {
+  width: 15%;
+  top: 5%;
+  left: 3%;
+  z-index: 2;
+  cursor: pointer;
+}
+img.ring {
+  transition: 3s;
+}
+
+img.ring:hover {
+  transform: rotate(360deg);
+}
+
+img:nth-of-type(2) {
+  width: 7%;
+  bottom: 19%;
+  right: 1%;
+  z-index: 4;
+}
+
+img:nth-of-type(3) {
+  width: 100%;
+  top: 35%;
+  left: 0;
+  z-index: 3;
+}
+
+img:nth-of-type(4) {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+img:nth-of-type(5) {
+  width: 7%;
+  top: 14%;
+  left: 7%;
+  z-index: 2;
+}
+
+img.rose {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+img.rose:hover {
+  opacity: 0.5;
+}
+
+img:nth-of-type(6) {
+  width: 10%;
+  bottom: 20%;
+  left: -200%;
+  z-index: 2;
+  transition: 2s ease;
+}
+
+img.rose:hover + img.roses {
+  left: 30%;
+}
+
+img:nth-of-type(7) {
+  width: 8%;
+  top: 24%;
+  right: 6%;
+  z-index: 4;
+}
+
+img:nth-of-type(8) {
+  width: 30%;
+  top: 24%;
+  left: 43%;
+  z-index: 2;
+}
+
+img.flowers {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+img.snow {
+  opacity: 0;
+  transition: 1s;
+}
+
+img.flowers:hover {
+  transform: scale(80%);
+}
+
+img.flowers:hover ~ img.snow {
+  opacity: 1;
+}
