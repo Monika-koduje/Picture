@@ -49,14 +49,18 @@ img:nth-of-type(3) {
   z-index: 3;
 }
 
-img:nth-of-type(4) {
+img.mountains {
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
-img:nth-of-type(5) {
+img.mountains_fog {
+  display: none;
+}
+
+img:nth-of-type(6) {
   width: 7%;
   top: 14%;
   left: 7%;
@@ -72,7 +76,7 @@ img.rose:hover {
   opacity: 0.5;
 }
 
-img:nth-of-type(6) {
+img.roses {
   width: 10%;
   bottom: 20%;
   left: -200%;
@@ -84,14 +88,16 @@ img.rose:hover + img.roses {
   left: 30%;
 }
 
-img:nth-of-type(7) {
+img.snow {
   width: 8%;
   top: 24%;
   right: 6%;
+  opacity: 0;
+  transition: 1s;
   z-index: 4;
 }
 
-img:nth-of-type(8) {
+img:nth-of-type(9) {
   width: 30%;
   top: 24%;
   left: 43%;
@@ -103,15 +109,24 @@ img.flowers {
   transition: 0.3s;
 }
 
-img.snow {
-  opacity: 0;
-  transition: 1s;
-}
-
 img.flowers:hover {
   transform: scale(80%);
 }
 
 img.flowers:hover ~ img.snow {
   opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  img.mountains {
+    display: none;
+  }
+
+  img.mountain_fog {
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 }
